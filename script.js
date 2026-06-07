@@ -1,15 +1,15 @@
 /**
  * A–Z Menagerie — Gallery data & interactions
- * Each `file` must match the filename in images/gallery/ exactly (case-sensitive).
+ * Each `file` must match the filename in the repository root exactly (case-sensitive).
  */
 
-const HERO_IMAGE = "images/hero/HEro.png";
+const HERO_IMAGE = "HEro.png";
 
 const ANIMALS = [
   { letter: "A", name: "Alligator", file: "Alligator.png", description: "A large, semi-aquatic reptile known for its powerful jaws and thick, armored skin." },
   { letter: "B", name: "Bear", file: "Bear.png", description: "A large, heavily built mammal known for its thick fur and winter hibernation." },
   { letter: "C", name: "Camel", file: "Camel.png", description: "A long-legged mammal known for its distinctive humps and ability to survive in harsh deserts." },
-  { letter: "D", name: "Dog", file: "Dog.png", description: "A highly adaptable, domesticated canine known for its keen sense of smell and strong bond with humans.", hoverSound: "./audio/dog-bark.wav" },
+  { letter: "D", name: "Dog", file: "Dog.png", description: "A highly adaptable, domesticated canine known for its keen sense of smell and strong bond with humans.", hoverSound: "./dog-bark.wav" },
   { letter: "E", name: "Elephant", file: "Elephant.png", description: "A massive land mammal known for its highly dexterous trunk and large, flapping ears." },
   { letter: "F", name: "Fox", file: "Fox.png", description: "A small-to-medium-sized canine known for its bushy tail and reputation for cunning intelligence." },
   { letter: "G", name: "Giraffe", file: "Giraffe.png", description: "A towering African mammal known for its incredibly long neck and distinctively spotted coat." },
@@ -17,18 +17,18 @@ const ANIMALS = [
   { letter: "I", name: "Iguana", file: "iguana.png", description: "A large, herbivorous lizard known for a prominent dewlap and a row of spines down its back." },
   { letter: "J", name: "Jaguar", file: "Jaguar.png", description: "A powerful, solitary big cat known for its rosette-spotted coat and exceptionally strong bite." },
   { letter: "K", name: "Kangaroo", file: "Kangaroo.png", description: "A hopping Australian marsupial known for carrying its undeveloped young in an abdominal pouch." },
-  { letter: "L", name: "Lion", file: "Lion.png", description: "A muscular big cat known for living in social prides and the male's impressive mane.", hoverSound: "./audio/lion-growl.wav" },
-  { letter: "M", name: "Monkey", file: "Monkey.png", description: "A highly adaptable primate known for its grasping hands, long tail, and tree-dwelling habits.", hoverSound: "./audio/monkey-giggle.wav" },
+  { letter: "L", name: "Lion", file: "Lion.png", description: "A muscular big cat known for living in social prides and the male's impressive mane.", hoverSound: "./lion-growl.wav" },
+  { letter: "M", name: "Monkey", file: "Monkey.png", description: "A highly adaptable primate known for its grasping hands, long tail, and tree-dwelling habits.", hoverSound: "./monkey-giggle.wav" },
   { letter: "N", name: "Needlefish", file: "Needlefish.png", description: "A slender, surface-dwelling fish known for its elongated, beak-like jaws filled with sharp teeth." },
   { letter: "O", name: "Ostrich", file: "Ostrich.png", description: "A large, flightless African bird known for its incredible running speed and long legs." },
   { letter: "P", name: "Peacock", file: "peacock.png", description: "A large, colorful bird known for the male's iridescent plumage and magnificent, fan-like tail display." },
   { letter: "Q", name: "Quail", file: "Quail.png", description: "A small, ground-dwelling game bird known for its plump body and distinctive feathered crest." },
   { letter: "R", name: "Rabbit", file: "Rabbit.png", description: "A small, burrowing mammal known for its long ears, fluffy tail, and rapid hopping movements." },
   { letter: "S", name: "Snake", file: "Snake.png", description: "A legless, elongated reptile known for its flexible jaw and slithering locomotion." },
-  { letter: "T", name: "Tiger", file: "Tiger.png", description: "A massive, solitary big cat known for its striking orange coat with dark vertical stripes.", hoverSound: "./audio/tiger-roar.mp3" },
+  { letter: "T", name: "Tiger", file: "Tiger.png", description: "A massive, solitary big cat known for its striking orange coat with dark vertical stripes.", hoverSound: "./tiger-roar.mp3" },
   { letter: "U", name: "Urchin", file: "Urial.png", description: "A spiny, globular marine invertebrate known for moving slowly across the ocean floor." },
   { letter: "V", name: "Vulture", file: "Vulture.png", description: "A large, scavenging bird of prey known for its featherless head and crucial role in cleaning up carrion." },
-  { letter: "W", name: "Wolf", file: "Wolf.png", description: "A highly social, pack-hunting canine known for its haunting howl and complex family structures.", hoverSound: "./audio/wolf-howl.wav" },
+  { letter: "W", name: "Wolf", file: "Wolf.png", description: "A highly social, pack-hunting canine known for its haunting howl and complex family structures.", hoverSound: "./wolf-howl.wav" },
   { letter: "X", name: "Xerus", file: "Xerus.png", description: "A burrowing African ground squirrel known for its coarse, bristly fur and using its bushy tail as a sunshade." },
   { letter: "Y", name: "Yak", file: "Yak.png", description: "A heavily built, long-haired bovine known for thriving in the freezing, high altitudes of the Himalayas." },
   { letter: "Z", name: "Zebra", file: "Zebra.png", description: "A wild, horse-like African mammal known for its iconic, unique pattern of black and white stripes." },
@@ -45,7 +45,7 @@ const heroImage = document.querySelector(".hero-image");
 let activeLetter = null;
 
 function imagePath(file) {
-  return `./images/gallery/${encodeURIComponent(file)}`;
+  return `./${encodeURIComponent(file)}`;
 }
 
 function setHeroImage() {
